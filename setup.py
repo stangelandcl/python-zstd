@@ -25,7 +25,7 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     ext_modules=[
-        Extension('zstd', zstdFiles)
+        Extension('zstd', zstdFiles, libraries=['zstd'])
     ],
     test_suite="tests",
     classifiers=[
